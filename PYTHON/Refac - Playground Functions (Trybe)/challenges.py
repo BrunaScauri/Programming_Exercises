@@ -61,3 +61,14 @@ def fizzBuzz(array):
       result.append('bug!')
   return result
 
+# Desafio 9
+# def encode(string):
+#   encript = 'Hi there!'
+#   # code = string.replace(/a/gi, 1).replace(/e/gi, 2).replace(/i/gi, 3).replace(/o/gi, 4).replace(/u/gi, 5)
+#   return code
+#   decript = encode(encript)
+
+# def decode(b):
+#   string_decoded = b.replaceAll(1, "a").replaceAll(2, "e").replaceAll(3, "i").replaceAll(4, "o").replaceAll(5, "u");
+#   return string_decoded
+#   WIP!
