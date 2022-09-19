@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "selenium": "^2.20.0"
+    "eslint": "^8.23.1",
+    "selenium": "^2.20.0",
+    "stylelint": "^14.12.0"
   }
 }
