@@ -8,4 +8,4 @@ Repositório para os exercícios e cursos que ando fazendo. :nerd_face:
 |--------------------------|--------------------|
 |Exercícios Variados|.|
 |First Lessons in Python|.|
-|. |.|
+|Selenium |.|
