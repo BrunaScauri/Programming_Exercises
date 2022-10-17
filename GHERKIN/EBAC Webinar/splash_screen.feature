@@ -1,8 +1,8 @@
 #language: pt
 Funcionalidade: Splash Screen
-  Eu, como usuário
-  Gostaria, que fosse exibido um carrousel de dicar
-  Porque, vou saber as funcionalidades do app
+  Eu, como usuário do app TODO
+  Gostaria, que fosse exibido a tela de Splash Screen
+  Porque, vou ter um tutorial das funcionalidades do app
 
 Contexto: Acessar o aplicativo
   Dado que o app foi aberto
