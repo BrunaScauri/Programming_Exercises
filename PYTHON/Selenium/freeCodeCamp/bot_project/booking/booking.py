@@ -1,13 +1,15 @@
 import booking.constants as const
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+from booking.booking_filtration import BookingFiltration
 
 class Booking(webdriver.Chrome):
     def __init__(self, driver_path=r'../../../drivers', teardown=False):
         self.driver_path = driver_path
         self.teardown = teardown
-        super(Booking, self).__init__()
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option('excludeSwitches', ['enable-loggin'])
+        super(Booking, self).__init__(options=options)
         self.implicitly_wait(15)
         self.maximize_window()
 
@@ -29,6 +31,7 @@ class Booking(webdriver.Chrome):
         search_field = self.find_element(By.NAME, 'ss')
         search_field.clear()
         search_field.send_keys(place_to_go)
+        # self.implicitly_wait()
 
         first_result = self.find_element(By.CSS_SELECTOR, f'li[data-i="0"]')
         # first_result_indexed = first_result[0]
@@ -60,9 +63,15 @@ class Booking(webdriver.Chrome):
             increase_button_element.click()
 
     def click_search(self):
-        search_button = self.find_element(By.CSS_SELECTOR, 'button[type="submit"')
+        search_button = self.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
         search_button.click()
 
     def apply_filtrations(self):
-        BookingFiltration()
-        
+        filtration = BookingFiltration(driver=self)
+        filtration.apply_star_rating(4, 5)
+        filtration.sort_price_lowerst_first()
+
+    def report_results(self):
+        hotel_boxes = self.find_element(By.ID, 'hotellist_inner').find_elements(By.CLASS_NAME, 'sr_property_block')
+        # esse id não existe hoje em dia no site do hotel. procurar outro método.
+        return hotel_boxes
