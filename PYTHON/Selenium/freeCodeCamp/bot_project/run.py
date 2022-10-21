@@ -10,7 +10,7 @@ try:
     bot.select_adults(10)
     bot.click_search()
     bot.apply_filtrations()
-    print(len(bot.report_results()))
+    # print(len(bot.report_results()))
 except Exception as e:
   if 'in PATH' in str(e):
     print('There is a problem running the app from the command line.')

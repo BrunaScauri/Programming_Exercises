@@ -68,10 +68,11 @@ class Booking(webdriver.Chrome):
 
     def apply_filtrations(self):
         filtration = BookingFiltration(driver=self)
-        filtration.apply_star_rating(4, 5)
-        filtration.sort_price_lowerst_first()
+        # filtration.apply_star_rating(4, 5)
+        filtration.sort_price_lowest_first()
 
-    def report_results(self):
-        hotel_boxes = self.find_element(By.ID, 'hotellist_inner').find_elements(By.CLASS_NAME, 'sr_property_block')
+    # def report_results(self):
+    #     hotel_boxes = self.find_element(By.CSS_SELECTOR, 'h2[text="Browse the results"]')
+        # find_elements(By.CLASS_NAME, 'sr_property_block')
         # esse id não existe hoje em dia no site do hotel. procurar outro método.
-        return hotel_boxes
+        # return hotel_boxes
