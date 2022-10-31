@@ -1,11 +1,13 @@
 # Programming Exercises
 
-Repositório para os exercícios e cursos que ando fazendo. :nerd_face:
+Repository for the courses and random exercises i've been doing. :nerd_face:
 
- Exercícios separados por branches/linguagens:
+Exercícios organized by branch/language.
   
-|PYTHON|JAVASCRIPT|
-|--------------------------|--------------------|
-|Exercícios Variados|.|
-|First Lessons in Python|.|
-|Selenium |.|
+|PYTHON|JAVASCRIPT|GHERKIN|
+|--------------------------|--------------------|------|
+|Varied Exercises|.| EBAC Webinar
+|First Lessons in Python|.|.|
+|Refac - Playground Functions (Trybe) in Python|.|.|
+|Selenium - freeCodeCamp course|.|.|
+|Selenium - Web Scraping Bot (booking.com)|.|.|
