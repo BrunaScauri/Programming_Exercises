@@ -2,7 +2,7 @@
 
 Repository for the courses and random exercises i've been doing. :nerd_face:
 
-Exercícios organized by branch/language.
+Exercises organized by branch/language.
   
 |PYTHON|JAVASCRIPT|GHERKIN|
 |--------------------------|--------------------|------|
