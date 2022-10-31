@@ -31,12 +31,10 @@ class Booking(webdriver.Chrome):
         search_field = self.find_element(By.NAME, 'ss')
         search_field.clear()
         search_field.send_keys(place_to_go)
-        # self.implicitly_wait()
+        self.implicitly_wait(3)
 
         first_result = self.find_element(By.CSS_SELECTOR, f'li[data-i="0"]')
-        # first_result_indexed = first_result[0]
         first_result.click()
-        # print(first_result)
 
     def select_date(self, check_in_date, check_out_date):
         check_in_element = self.find_element(By.CSS_SELECTOR, f'td[data-date="{check_in_date}"]')
@@ -68,10 +66,11 @@ class Booking(webdriver.Chrome):
 
     def apply_filtrations(self):
         filtration = BookingFiltration(driver=self)
-        filtration.apply_star_rating(4, 5)
-        filtration.sort_price_lowerst_first()
+        filtration.sort_price_lowest_first()
+        # filtration.apply_star_rating(4, 5)
 
-    def report_results(self):
-        hotel_boxes = self.find_element(By.ID, 'hotellist_inner').find_elements(By.CLASS_NAME, 'sr_property_block')
+    # def report_results(self):
+    #     hotel_boxes = self.find_element(By.CSS_SELECTOR, 'h2[text="Browse the results"]')
+        # find_elements(By.CLASS_NAME, 'sr_property_block')
         # esse id não existe hoje em dia no site do hotel. procurar outro método.
-        return hotel_boxes
+        # return hotel_boxes
